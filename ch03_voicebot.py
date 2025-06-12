@@ -71,10 +71,10 @@ def main():
     with st.expander("응지 음성비서 프로그램에 관해해", expanded=True):
         st.write(
         """     
-        - 음성비서 프로그램의 UI는 스트림릿을 활용했심심.
-        - STT(Speech-To-Text)는 OpenAI의 Whisper AI를 활용했심심. 
-        - 답변은 OpenAI의 GPT 모델을 활용했심심. 
-        - TTS(Text-To-Speech)는 구글의 Google Translate TTS를 활용했심심.
+        - 음성비서 프로그램의 UI는 스트림릿을 활용했심.
+        - STT(Speech-To-Text)는 OpenAI의 Whisper AI를 활용했심. 
+        - 답변은 OpenAI의 GPT 모델을 활용했심. 
+        - TTS(Text-To-Speech)는 구글의 Google Translate TTS를 활용했심.
         """
         )
 
