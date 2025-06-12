@@ -104,7 +104,7 @@ def main():
     col1, col2 =  st.columns(2)
     with col1:
         # 왼쪽 영역 작성
-        st.subheader("질문하슈슈")
+        st.subheader("질문하슈")
         # 음성 녹음 아이콘 추가
         audio = audiorecorder("클릭해서 녹음하기", "녹음 ing...")
         if (audio.duration_seconds > 0) and (st.session_state["check_reset"]==False):
@@ -121,7 +121,7 @@ def main():
 
     with col2:
         # 오른쪽 영역 작성
-        st.subheader("퀘스쳔/앤썰썰")
+        st.subheader("퀘스쳔/앤썰")
         if  (audio.duration_seconds > 0)  and (st.session_state["check_reset"]==False):
             # ChatGPT에게 답변 얻기
             response = ask_gpt(st.session_state["messages"], model)
