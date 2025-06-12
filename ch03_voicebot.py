@@ -49,7 +49,7 @@ def TTS(response):
 def main():
     # 기본 설정
     st.set_page_config(
-        page_title="음성 비서 프로그램",
+        page_title="응지의 음성 비서 프로그램",
         layout="wide")
 
     # session state 초기화
@@ -63,18 +63,18 @@ def main():
         st.session_state["check_reset"] = False
 
     # 제목 
-    st.header("음성 비서 프로그램")
+    st.header("응지의 음성 비서 프로그램")
     # 구분선
     st.markdown("---")
 
     # 기본 설명
-    with st.expander("음성비서 프로그램에 관하여", expanded=True):
+    with st.expander("응지 음성비서 프로그램에 관해해", expanded=True):
         st.write(
         """     
-        - 음성비서 프로그램의 UI는 스트림릿을 활용했습니다.
-        - STT(Speech-To-Text)는 OpenAI의 Whisper AI를 활용했습니다. 
-        - 답변은 OpenAI의 GPT 모델을 활용했습니다. 
-        - TTS(Text-To-Speech)는 구글의 Google Translate TTS를 활용했습니다.
+        - 음성비서 프로그램의 UI는 스트림릿을 활용했심심.
+        - STT(Speech-To-Text)는 OpenAI의 Whisper AI를 활용했심심. 
+        - 답변은 OpenAI의 GPT 모델을 활용했심심. 
+        - TTS(Text-To-Speech)는 구글의 Google Translate TTS를 활용했심심.
         """
         )
 
@@ -104,9 +104,9 @@ def main():
     col1, col2 =  st.columns(2)
     with col1:
         # 왼쪽 영역 작성
-        st.subheader("질문하기")
+        st.subheader("질문하슈슈")
         # 음성 녹음 아이콘 추가
-        audio = audiorecorder("클릭하여 녹음하기", "녹음중...")
+        audio = audiorecorder("클릭해서 녹음하기", "녹음 ing...")
         if (audio.duration_seconds > 0) and (st.session_state["check_reset"]==False):
             # 음성 재생 
             st.audio(audio.export().read())
@@ -121,7 +121,7 @@ def main():
 
     with col2:
         # 오른쪽 영역 작성
-        st.subheader("질문/답변")
+        st.subheader("퀘스쳔/앤썰썰")
         if  (audio.duration_seconds > 0)  and (st.session_state["check_reset"]==False):
             # ChatGPT에게 답변 얻기
             response = ask_gpt(st.session_state["messages"], model)
